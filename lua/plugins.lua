@@ -20,5 +20,10 @@ return require('packer').startup(function(use)
   }
   use { 'echasnovski/mini.nvim', branch = 'stable' }
   use { 'lukas-reineke/indent-blankline.nvim' }
+  use {
+    'utilyre/barbecue.nvim', tag = '*',
+    requires = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' },
+    after = 'nvim-tree/nvim-web-devicons'
+  }
 end)
 

@@ -4,6 +4,11 @@ require('plugins')
 require('lualine_bubbles')
 require('keybinds')
 require('mini_config')
+require("barbecue").setup({
+  symbols = {
+    separator = '>'
+  }
+})
 
 vim.cmd[[colorscheme tokyonight-night]]
 
