@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
   use {
     'utilyre/barbecue.nvim', tag = '*',
     requires = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' },
-    after = 'nvim-tree/nvim-web-devicons'
+    after = 'nvim-web-devicons'
   }
 end)
 
