@@ -80,6 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/romgrk/barbar.nvim"
   },
   ["barbecue.nvim"] = {
+    config = { "\27LJ\2\n\\\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fsymbols\1\0\0\1\0\1\14separator\6>\nsetup\rbarbecue\frequire\0" },
     load_after = {},
     loaded = true,
     needs_bufread = false,
@@ -153,6 +154,10 @@ time([[Defining packer_plugins]], false)
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-web-devicons ]]
 vim.cmd [[ packadd barbecue.nvim ]]
+
+-- Config for: barbecue.nvim
+try_loadstring("\27LJ\2\n\\\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fsymbols\1\0\0\1\0\1\14separator\6>\nsetup\rbarbecue\frequire\0", "config", "barbecue.nvim")
+
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false

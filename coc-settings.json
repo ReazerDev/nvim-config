@@ -1,4 +1,8 @@
 {
+  "solargraph.diagnostics": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true,
   "languageserver": {
     "csharp-ls": {
       "command": "csharp-ls",

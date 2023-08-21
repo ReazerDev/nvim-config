@@ -18,3 +18,9 @@ vim.keymap.set('n', '<leader>ff', ':Telescope live_grep<CR>')
 vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, { remap = false, expr = true })
 vim.keymap.set('n', '.', '<Nop>')
 
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader>ns',
+  "<cmd>lua require('package-info').show({ force = true })<cr>",
+  { silent = true, noremap = true }
+)

@@ -23,7 +23,18 @@ return require('packer').startup(function(use)
   use {
     'utilyre/barbecue.nvim', tag = '*',
     requires = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' },
-    after = 'nvim-web-devicons'
+    after = 'nvim-web-devicons',
+    config = function()
+      require("barbecue").setup({
+        symbols = {
+          separator = '>'
+        }
+      })
+    end
   }
+  use({
+    'vuki656/package-info.nvim',
+    requires = 'MunifTanjim/nui.nvim'
+  })
 end)
 
