@@ -25,4 +25,4 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
-vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', { nargs = 1 })
+vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', { nargs = 0 })
