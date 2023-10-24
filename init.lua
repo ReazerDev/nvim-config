@@ -18,7 +18,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.mouse = r
 vim.opt.number = true
-vim.opt.textwidth = 0
 
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
