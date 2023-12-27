@@ -4,6 +4,7 @@ require('plugins')
 require('lualine_bubbles')
 require('keybinds')
 require('mini_config')
+require('telescope_config')
 require('package-info').setup({
   package_manager = 'npm',
   autostart = true,
