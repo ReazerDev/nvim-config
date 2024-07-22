@@ -13,7 +13,12 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use { 'romgrk/barbar.nvim', requires = 'nvim-tree/nvim-web-devicons' }
+  -- use { 'romgrk/barbar.nvim', requires = 'nvim-tree/nvim-web-devicons' }
+  use {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }

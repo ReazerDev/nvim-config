@@ -3,6 +3,7 @@
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
   "solargraph.hover": true,
+  "eslint.experimental.useFlatConfig": true,
   "languageserver": {
     "csharp-ls": {
       "command": "csharp-ls",
