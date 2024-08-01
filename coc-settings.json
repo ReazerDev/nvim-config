@@ -4,6 +4,7 @@
   "solargraph.formatting": true,
   "solargraph.hover": true,
   "eslint.experimental.useFlatConfig": true,
+  "inlayHint.enable": false,
   "languageserver": {
     "csharp-ls": {
       "command": "csharp-ls",
