@@ -37,7 +37,7 @@ vim.keymap.set(
   { desc = 'Open harpoon window' }
 )
 
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd.colorscheme "catppuccin-mocha"
 
 vim.opt.autoindent = true
 vim.opt.expandtab = true
