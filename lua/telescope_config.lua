@@ -9,3 +9,10 @@ function telescope_resume()
   end
 end
 vim.keymap.set("n", ".f", telescope_resume)
+require('telescope').setup({
+  extensions = {
+    ["ui-select"] = { require("telescope.themes").get_dropdown{} }
+  }
+})
+require('telescope').load_extension('ui-select')
+require("telescope").load_extension("csharpls_definition")

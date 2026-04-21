@@ -1,46 +1,25 @@
-vim.cmd [[packadd packer.nvim]]
+vim.pack.add({
+  'https://github.com/nvim-tree/nvim-web-devicons',
+  'https://github.com/nvim-lua/plenary.nvim',
+  'https://github.com/SmiteshP/nvim-navic',
 
-return require('packer').startup(function(use)
-  use { 'wbthomason/packer.nvim' }
-  use { 'neoclide/coc.nvim', branch = 'release' }
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  }
-  -- use { 'romgrk/barbar.nvim', requires = 'nvim-tree/nvim-web-devicons' }
-  use {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' }
-  }
-  use { 'echasnovski/mini.nvim', branch = 'stable' }
-  use { 'lukas-reineke/indent-blankline.nvim' }
-  use {
-    'utilyre/barbecue.nvim', tag = '*',
-    requires = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' },
-    after = 'nvim-web-devicons',
-    config = function()
-      require("barbecue").setup({
-        symbols = {
-          separator = '>'
-        }
-      })
-    end
-  }
-  use({
-    'vuki656/package-info.nvim',
-    requires = 'MunifTanjim/nui.nvim'
-  })
-  use({ 'leafOfTree/vim-vue-plugin' })
-end)
-
+  { src = 'https://github.com/catppuccin/nvim', name = 'catpuccin' },
+  'https://github.com/nvim-telescope/telescope.nvim',
+  'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
+  'https://github.com/nvim-treesitter/nvim-treesitter',
+  { src = 'https://github.com/ThePrimeagen/harpoon', version = 'harpoon2' },
+  'https://github.com/nvim-lualine/lualine.nvim',
+  { src = 'https://github.com/echasnovski/mini.nvim', version = 'stable' },
+  'https://github.com/lukas-reineke/indent-blankline.nvim',
+  'https://github.com/utilyre/barbecue.nvim',
+  'https://github.com/neovim/nvim-lspconfig',
+  'https://github.com/nvim-telescope/telescope-ui-select.nvim',
+  'https://github.com/Decodetalkers/csharpls-extended-lsp.nvim',
+  'https://github.com/mfussenegger/nvim-dap',
+  'https://github.com/hrsh7th/nvim-cmp',
+  'https://github.com/hrsh7th/cmp-nvim-lsp',
+  'https://github.com/hrsh7th/cmp-buffer',
+  'https://github.com/hrsh7th/cmp-path',
+  'https://github.com/L3MON4D3/LuaSnip',
+  'https://github.com/saadparwaiz1/cmp_luasnip',
+})

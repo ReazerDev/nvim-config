@@ -1,13 +1,19 @@
 vim.g.mapleader = ","
 
+require('vim._core.ui2').enable()
+
 require('plugins')
 require('lualine_bubbles')
 require('mini_config')
 require('telescope_config')
-require('package-info').setup({
-  package_manager = 'npm',
-  autostart = true,
-  hide_up_to_date = true
+require('autocompletion')
+require('lsp')
+require('dap_config')
+require('barbecue').setup({
+    symbols = {
+        separator = '>'
+    },
+    attach_navic = false
 })
 local harpoon = require('harpoon')
 harpoon:setup({})
@@ -45,10 +51,18 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.mouse = 'r'
 vim.opt.number = true
+vim.opt.fileformats = { "dos" }
 
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
-vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', { nargs = 0 })
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(args)
+    local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+    if lang then
+      pcall(vim.treesitter.start, args.buf, lang)
+    end
+  end,
+})
