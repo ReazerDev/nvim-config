@@ -37,10 +37,26 @@ return require('packer').startup(function(use)
       })
     end
   }
-  use({
+  use {
     'vuki656/package-info.nvim',
     requires = 'MunifTanjim/nui.nvim'
-  })
-  use({ 'leafOfTree/vim-vue-plugin' })
+  }
+  use { 'leafOfTree/vim-vue-plugin' }
+  use { 'neovim/nvim-lspconfig' }
+  use {
+    'akinsho/flutter-tools.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+      'neovim/nvim-lspconfig',
+    }
+  }
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
+  use { 'L3MON4D3/LuaSnip' }
+  use { 'saadparwaiz1/cmp_luasnip' }
 end)
 

@@ -5,11 +5,6 @@
   "solargraph.hover": true,
   "eslint.experimental.useFlatConfig": true,
   "inlayHint.enable": false,
-  "languageserver": {
-    "csharp-ls": {
-      "command": "csharp-ls",
-      "filetypes": ["cs"],
-      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
-    }
-  }
+  "suggest.enable": false,
+  "suggest.autoTrigger": "none"
 }

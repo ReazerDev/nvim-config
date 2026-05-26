@@ -1,6 +1,9 @@
 vim.g.mapleader = ","
 
+require('vim._core.ui2').enable()
+
 require('plugins')
+require('lsp')
 require('lualine_bubbles')
 require('mini_config')
 require('telescope_config')
@@ -37,6 +40,8 @@ vim.keymap.set(
   { desc = 'Open harpoon window' }
 )
 
+vim.o.updatetime = 200
+
 vim.cmd.colorscheme "catppuccin-mocha"
 
 vim.opt.autoindent = true
@@ -45,6 +50,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.mouse = 'r'
 vim.opt.number = true
+vim.opt.equalalways = false
 
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
@@ -52,3 +58,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
 vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', { nargs = 0 })
+vim.opt.complete = ""
