@@ -33,6 +33,12 @@ vim.lsp.enable("cssls")
 vim.api.nvim_create_autocmd("CursorHold", {
   pattern = { "*" },
   callback = function()
-    vim.diagnostic.open_float({ scope = 'c', focus = false })
+    vim.diagnostic.open_float({ 
+      scope = 'c', 
+      focus = false,
+      border = "rounded",
+      source = "always",
+      header = "",
+    })
   end,
 })

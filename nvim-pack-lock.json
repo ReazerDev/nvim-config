@@ -32,6 +32,10 @@
       "rev": "1480abcafab446a3f66eb026faabe25b8412fc5f",
       "src": "https://github.com/Decodetalkers/csharpls-extended-lsp.nvim"
     },
+    "dressing.nvim": {
+      "rev": "2d7c2db2507fa3c4956142ee607431ddb2828639",
+      "src": "https://github.com/stevearc/dressing.nvim"
+    },
     "harpoon": {
       "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
       "src": "https://github.com/ThePrimeagen/harpoon",

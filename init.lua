@@ -15,6 +15,11 @@ require('barbecue').setup({
     },
     attach_navic = false
 })
+require("dressing").setup({
+  input = {
+    border = "rounded",
+  }
+})
 local harpoon = require('harpoon')
 harpoon:setup({})
 require('keybinds')
@@ -52,6 +57,7 @@ vim.opt.shiftwidth = 2
 vim.opt.mouse = 'r'
 vim.opt.number = true
 vim.opt.fileformats = { "dos" }
+vim.opt.updatetime = 300
 
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_perl_provider = 0
